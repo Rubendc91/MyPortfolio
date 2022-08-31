@@ -1,12 +1,20 @@
+/*Variables*/
+:root{
+--BaseColor: grey;
+--imgBackgroundColor: black;
+--imgBorderColor: white;
+--cardTextColor: darkblue;
+/*universal selectors*/
+}
 html {
     scroll-behavior: smooth;
   }
-/*header*/
+/*header selectors*/
 header{
     justify-content:space-between;
     display: flex;
      width: 100%;
-    background-color: gray;
+    background-color: var(--BaseColor);
 
 }
 header section{
@@ -17,9 +25,9 @@ header section h2{
         }
 header img{
     max-width: 4rem;
-    border: 2px solid white;
+    border: 2px solid var(--imgBorderColor);
     border-radius: 100px;
-    background-color: black;
+    background-color: var(--imgBackgroundColor);
 }
 
 header nav {
@@ -36,12 +44,12 @@ a {
     color: black;
     text-decoration: none;
 }
-/*greeting*/
+/*greeting selectors*/
 section.greeting{
     text-align: center;
     width: 95%;
 }
-/*about*/
+/*about selectors*/
 .about {
     display: flex;
     flex-direction: column;
@@ -49,27 +57,26 @@ section.greeting{
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: gray;
+    background-color: var(--BaseColor);
     color: #ffffff;
 }
 
 .aboutImg {
     align-self: flex-end;
     max-width: 9rem;
-    border: 2px solid white;
+    border: 2px solid var(--imgBorderColor);
     border-radius: 100px;
-    background-color: black;
+    background-color: var(--imgBackgroundColor);
 }
-/*projects*/
+/*projects selectors*/
 .projectsBox h1{
     text-align: center;
 }
 .projectsBox{
-    border: 2px solid gray;
+    border: 2px solid var(--BaseColor);
 
 }
 .projects{
-    /* border: 2px solid darkblue; */
     justify-content:space-around;
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +93,7 @@ section.greeting{
     justify-content: flex-start;
     min-height: 100%;
     padding: 2rem;
-    color: darkblue;
+    color: var(--cardTextColor);
     }
 figure img{
     width: 100px;
@@ -96,7 +103,7 @@ figure img{
 .star{
     width: 200px;
 }
-/*footer*/
+/*footer selectors*/
 #contact img{
     max-width: 100px;
 
