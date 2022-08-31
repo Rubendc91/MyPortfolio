@@ -2,7 +2,8 @@
 :root{
 --BaseColor: grey;
 --imgBackgroundColor: black;
---imgBorderColor: white;
+--imgBorder: .25rem solid white;
+--imgRadius:100px;
 --cardTextColor: darkblue;
 /*universal selectors*/
 }
@@ -25,8 +26,8 @@ header section h2{
         }
 header img{
     max-width: 4rem;
-    border: 2px solid var(--imgBorderColor);
-    border-radius: 100px;
+    border: var(--imgBorder);
+    border-radius: var(--imgRadius);
     background-color: var(--imgBackgroundColor);
 }
 
@@ -50,7 +51,7 @@ section.greeting{
     width: 95%;
 }
 /*about selectors*/
-.about {
+section.about {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -60,12 +61,17 @@ section.greeting{
     background-color: var(--BaseColor);
     color: #ffffff;
 }
+section.about h1,
+section.about p{
+    text-align: left;
+    align-self: flex-start;
+}
 
 .aboutImg {
     align-self: flex-end;
     max-width: 9rem;
-    border: 2px solid var(--imgBorderColor);
-    border-radius: 100px;
+    border: var(--imgBorder);
+    border-radius: var(--imgRadius);
     background-color: var(--imgBackgroundColor);
 }
 /*projects selectors*/
@@ -122,12 +128,7 @@ figure img{
 
 /*Media query*/
 @media screen and (max-width: 992px) {
-    .about h1{
-        align-self: center;
-        }
-    .about p{
-        text-align: center;
-    }
+
     } 
     .aboutImg {
          max-width: 8rem;
@@ -144,6 +145,11 @@ figure img{
             justify-content: center;
             margin-top:1rem;
           }
+        section.about h1,
+        section.about p{
+            text-align: center;
+            align-self: center;
+        }
         .aboutImg{
             justify-content:space-around;
             max-width: 7rem;
